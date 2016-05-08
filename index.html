@@ -2,6 +2,8 @@
 <head>
 	<meta <charset="utf-8">
 	<link rel="stylesheet" href="style.css">
+	<script src="http://d3js.org/d3.v3.min.js"></script>
+	<script src="http://dimplejs.org/dist/dimple.v2.1.6.min.js"></script>
 </head>
 <body>
 	<div class="caja">
@@ -28,6 +30,20 @@
 				</div>
 			</div>
 		</div>
+	</div>
+	<div>
+		<script type="text/javascript">
+    var svg = dimple.newSvg("body", 800, 600);
+    var data = [
+      { "Word":"Hello", "Awesomeness":2000 },
+      { "Word":"World", "Awesomeness":3000 }
+    ];
+    var chart = new dimple.chart(svg, data);
+    chart.addCategoryAxis("x", "Word");
+    chart.addMeasureAxis("y", "Awesomeness");
+    chart.addSeries(null, dimple.plot.bar);
+    chart.draw();
+  </script>
 	</div>
 </body>
 </html>
