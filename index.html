@@ -1,23 +1,33 @@
 <!DOCTYPE html>
-<html>
 <head>
-  <script src="http://d3js.org/d3.v3.min.js"></script>
-  <script src="http://dimplejs.org/dist/dimple.v2.1.6.min.js"></script>
+	<meta <charset="utf-8">
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div id="chartContainer">
- <script type="text/javascript">
-    var svg = dimple.newSvg("#chartContainer", 590, 400);
-    d3.tsv("/data/example_data.tsv", function (data) {
-      var myChart = new dimple.chart(svg, data);
-      myChart.setBounds(75, 30, 480, 330)
-      myChart.addMeasureAxis("x", "Unit Sales");
-      var y = myChart.addCategoryAxis("y", "Month");
-      y.addOrderRule("Date");
-      myChart.addSeries(null, dimple.plot.bar);
-      myChart.draw();
-    });
-  </script>
-</div>
+	<div class="caja">
+		<div class="container">
+			<h1>Femicidios</h1>
+		</div>
+	</div>
+	<div class="caja2">
+		<div class="container2">
+			<div class="col-md-5">
+				<h3>Segun el Sernam, el Femicidio es:</h3>
+				<div class="container">
+					<p>Es el homicidio cometido contra la mujer que es o ha sido conyuge o conviviente del autor del crimen</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="caja1">
+		<div class="container1">
+			<div class="col-md-8">
+				<h2>Variable</h2>
+				<div class="container">
+					<img src="imagen/imagen1'.svg"/width="100" height="100">
+				</div>
+			</div>
+		</div>
+	</div>
 </body>
 </html>
