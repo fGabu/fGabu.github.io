@@ -4,46 +4,54 @@
 	<link rel="stylesheet" href="style.css">
 	<script src="http://d3js.org/d3.v3.min.js"></script>
 	<script src="http://dimplejs.org/dist/dimple.v2.1.6.min.js"></script>
+	<script type="text/javascript" src="jquery-2.2.3.js"></script>
 </head>
 <body>
-	<div class="caja">
-		<div class="container">
-			<h1>Femicidios</h1>
-		</div>
+	<div class="titulo">
+		<h1>Femicidios</h1>
 	</div>
-	<div class="caja2">
-		<div class="container2">
-			<div class="col-md-5">
-				<h3>Segun el Sernam, el Femicidio es:</h3>
-				<div class="container">
-					<p>Es el homicidio cometido contra la mujer que es o ha sido conyuge o conviviente del autor del crimen</p>
-				</div>
+	<div class="cuerpo">
+		<div class="seccion1">
+			<div class="container">
+				<h2>Segun el Sernam, el Femicidio es:</h3>
+			</div>
+			<div class="container">
+				<p>Es el homicidio cometido contra la mujer que es o ha sido conyuge o conviviente del autor del crimen</p>
 			</div>
 		</div>
-	</div>
-	<div class="caja1">
-		<div class="container1">
-			<div class="col-md-8">
+		
+		<div class="seccion2">
+			<div class="container1">
 				<h2>Variable</h2>
-				<div class="container">
-					<img src="img/imagen1'.svg"/width="100" height="100">
-				</div>
+			</div>
+			<div class="container">
+				<img src="img/imagen1'.svg"/width="100" height="100" id="muerte"> 
+				<p id="sheva">Sheva</p>
+				<p id="hola">hola</p>
+				<script>
+					$( "#hola" ).click(function() {
+					  event.preventDefault();
+					  $( "#sheva" ).toggle();
+					});
+				</script>
 			</div>
 		</div>
-	</div>
-	<div>
-		<script type="text/javascript">
-    var svg = dimple.newSvg("body", 800, 600);
-    var data = [
-      { "Word":"Hello", "Awesomeness":2000 },
-      { "Word":"World", "Awesomeness":3000 }
-    ];
-    var chart = new dimple.chart(svg, data);
-    chart.addCategoryAxis("x", "Word");
-    chart.addMeasureAxis("y", "Awesomeness");
-    chart.addSeries(null, dimple.plot.bar);
-    chart.draw();
-  </script>
+		<div class="interaccion">
+			<div id="chartContainer">
+			  <script type="text/javascript">
+			    var svg = dimple.newSvg("body", 800, 600);
+			    var data = [
+			      { "Word":"Hello", "Awesomeness":2000 },
+			      { "Word":"World", "Awesomeness":3000 }
+			    ];
+			    var chart = new dimple.chart(svg, data);
+			    chart.addCategoryAxis("x", "Word");
+			    chart.addMeasureAxis("y", "Awesomeness");
+			    chart.addSeries(null, dimple.plot.bar);
+			    chart.draw();
+	 			 </script>
+			</div>
+		</div>
 	</div>
 </body>
 </html>
