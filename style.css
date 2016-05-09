@@ -17,7 +17,7 @@ h1 {
   background-color: #E0D9D1;
   font-family:'bebas neue';
   text-align:center;
-  margin:0px 100px 0px;
+  margin:0px;
   height:100%;
 }
 .seccion1 .container{
@@ -47,7 +47,15 @@ h1 {
 .seccion2 img{
   padding:20px;
 }
+#menu1{
+  clear:both;
+
+}
 
 .interaccion{
-  text-align:center;
+  float:left;
+}
+#TipodeArma2007{
+  margin:20px;
+  padding:0px;
 }
