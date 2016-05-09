@@ -127,11 +127,11 @@
   <div id="chartContainer3">
   <script type="text/javascript">
     var svg3 = dimple.newSvg("#chartContainer3", 590, 400);
-    d3.csv("data/2007-Lugar.csv", function (data) {
+    d3.csv("data/2007-Relacion.csv", function (data) {
       var myChart3 = new dimple.chart(svg3, data);
       myChart3.setBounds(75, 30, 480, 330);
       myChart3.addMeasureAxis("x", "Cantidad");
-      var y = myChart3.addCategoryAxis("y", "Lugar de ocurrencia");
+      var y = myChart3.addCategoryAxis("y", "Tipo Relacion");
 
       myChart3.addSeries(null, dimple.plot.bar);
       myChart3.draw();
