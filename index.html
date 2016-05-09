@@ -54,7 +54,6 @@
 				<img src="img/relacion.svg"/width="100" height="100" id="relacion"> 
 		
 				<img src="img/suicidio.svg"/width="100" height="100" id="suicidio"> 
-				<img src="img/menu.svg"/width="100" height="200" id="menu1">
 				
 
 
@@ -103,7 +102,7 @@
 
 <div id="LugarOcurrencia2007">
 
-<h3>Lugar de ocurrencia</h3>
+<h3>Lugar de ocurrencia 2007</h3>
   <div id="chartContainer2">
   <script type="text/javascript">
     var svg2 = dimple.newSvg("#chartContainer2", 590, 400);
@@ -123,7 +122,7 @@
 
 <div id="Relacion2007">
 
-<h3>Relacion victima/victimario</h3>
+<h3>Relacion victima/victimario 2007</h3>
   <div id="chartContainer3">
   <script type="text/javascript">
     var svg3 = dimple.newSvg("#chartContainer3", 590, 400);
@@ -135,6 +134,85 @@
 
       myChart3.addSeries(null, dimple.plot.bar);
       myChart3.draw();
+  });
+  </script>
+  </div>
+
+</div>
+
+<div id="TipodeArma2008">
+
+<h3>Tipos de arma 2008</h3>	 	
+<div id="chartContainer4">
+  <script type="text/javascript">
+    var svg4 = dimple.newSvg("#chartContainer4", 590, 400);
+    d3.csv("data/2008-TipodeArma.csv", function (data) {
+      var myChart4 = new dimple.chart(svg4, data);
+      myChart4.setBounds(75, 30, 480, 330);
+      myChart4.addMeasureAxis("x", "Frecuencia");
+      var y = myChart4.addCategoryAxis("y", "TipodeArma");
+      myChart4.addSeries(null, dimple.plot.bar);
+      myChart4.draw();
+  });
+  </script>
+	</div>
+
+</div>
+
+<div id="RangodeEdad2008">
+
+<h3>Edad de las victimas 2008</h3>
+  <div id="chartContainer5">
+  <script type="text/javascript">
+    var svg5 = dimple.newSvg("#chartContainer5", 590, 400);
+    d3.csv("data/2008-EdadVictima.csv", function (data) {
+      var myChart5 = new dimple.chart(svg5, data);
+      myChart5.setBounds(75, 30, 480, 330);
+      myChart5.addMeasureAxis("x", "Frecuencia");
+      var y = myChart5.addCategoryAxis("y", "Edad Victima");
+
+      myChart5.addSeries(null, dimple.plot.bar);
+      myChart5.draw();
+  });
+  </script>
+  </div>
+
+</div>
+
+<div id="LugarOcurrencia2008">
+
+<h3>Lugar de ocurrencia 2008</h3>
+  <div id="chartContainer6">
+  <script type="text/javascript">
+    var svg6 = dimple.newSvg("#chartContainer6", 590, 400);
+    d3.csv("data/2008-Lugar.csv", function (data) {
+      var myChart6 = new dimple.chart(svg6, data);
+      myChart6.setBounds(75, 30, 480, 330);
+      myChart6.addMeasureAxis("x", "Frecuencia");
+      var y = myChart6.addCategoryAxis("y", "Lugar de ocurrencia");
+
+      myChart6.addSeries(null, dimple.plot.bar);
+      myChart6.draw();
+  });
+  </script>
+  </div>
+
+</div>
+
+<div id="Relacion2008">
+
+<h3>Relacion victima/victimario 2008</h3>
+  <div id="chartContainer7">
+  <script type="text/javascript">
+    var svg7 = dimple.newSvg("#chartContainer7", 590, 400);
+    d3.csv("data/2008-Relacion.csv", function (data) {
+      var myChart7 = new dimple.chart(svg7, data);
+      myChart7.setBounds(75, 30, 480, 330);
+      myChart7.addMeasureAxis("x", "Frecuencia");
+      var y = myChart7.addCategoryAxis("y", "Tipo de relacion");
+
+      myChart7.addSeries(null, dimple.plot.bar);
+      myChart7.draw();
   });
   </script>
   </div>
