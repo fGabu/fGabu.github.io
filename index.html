@@ -1,72 +1,82 @@
 <!DOCTYPE html>
-<html>
 <head>
-	<title>Kapoo</title>
-	<link rel="stylesheet" href="T2A_FernandoGajardo\style.css">
+	<meta <charset="utf-8">
+	<link rel="stylesheet" href="style.css">
+	<script src="http://d3js.org/d3.min.js"></script>
+	<script src="http://dimplejs.org/dist/dimple.v2.1.6.min.js"></script>
+	<script type="text/javascript" src="lib/jquery-2.2.3.js"></script>
+	<script>
+	$(document).ready(function(){
+		$("#muertesGr").hide();
+    $("#muertes").click(function(){
+        $("#muertesGr").toggle();
+    });
+	});
+	</script>
+	<script>
+	$(document).ready(function(){
+		$("#relacionGr").hide()
+    $("#relacion").click(function(){
+        $("#relacionGr").toggle();
+    });
+	});
+	</script>
+	<script>
+	$(document).ready(function(){
+		$("#suicidioGr").hide();
+    $("#suicidio").click(function(){
+        $("#suicidioGr").toggle();
+    });
+	});
+	</script>
 </head>
 <body>
-	<header>
-		<div class="container">
-			<h1>Kapoo</h1>
-			<p>Tu espacio de trabajo grupal</p>
-		</div>
-	</header>
-	<nav>
-		<div class="container">
-			<ul>
-				<li><a href="T2A_FernandoGajardo\otraPagina.html"><strong>Contacto</strong></a></li>
-				<li><a href="index.html" class="activa"><strong>Inicio</strong></a></li>
-			</ul>	
-		</div>	
-	</nav>
-	<div class="cuerpodelapagina">
-		<div class="resumen">
-			<h2 class="resumen1">Kapoo es una pagina enfocada en ayudarte a hacer tus trabajos grupales.</h2>
-		</div>
-		<div class="restoDeLaPagina">
-			<div class="ejemplos">
-				<div id="ejemplotitulo">
-					<h3 id="titulo1">Con Kapoo puedes hacer tus proyectos grupales mas facil!</h3>
-				</div>
-				<div class="imagenes_ejemplo">
-					<div class="container1">
-						<img src="T2A_FernandoGajardo\ejemplo1.jpg">
-						
-					</div>
-					<div class="container2">
-						<img src="T2A_FernandoGajardo\123123123.jpg">
-					</div>
-					
-				</div>
-				<div class="textos_ejemplo">
-					<div class="texto1">
-						<h3>Haz uso del canvas model en tiempo real</h3>
-						<p>Aplica el sistema usado en varios grupos de desarrollo para tener un registro del avanze de su proyecto</p>
-					</div>
-					<div class="texto2">
-						<h3>Trabajo simultaneo</h3>
-						<p>Trabaja con tus compa&ntilde;eros como si estuvieran en la misma habitacion, sistema de sincronizacion de texto y comunicancion por voz instantanea</p>
-					</div>
-					
-				</div>	
+	<div class="titulo">
+		<h1>Femicidios</h1>
+	</div>
+	<div class="cuerpo">
+		<div class="seccion1">
+			<div class="container">
+				<h2>Segun el Sernam, el Femicidio es:</h3>
+			</div>
+			<div class="container">
+				<p>Es el homicidio cometido contra la mujer que es o ha sido conyuge o conviviente del autor del crimen</p>
 			</div>
 		</div>
-		<div class="barraInformacion">
-			<p>Kapoo es un concepto de trabajos grupal</p>
-			<p>Imagenes de Creative Stall from noun project, educadictos.com y Steven Zwerink en flickr</p>
-			<ul>
-				<li id="mail"><strong>Mail</strong></li>
-				<li>fjgajardo@uc.cl</li>
-				<li id="direccion"><strong>Direccion</strong></li>
-				<li>Una direccion falsa</li>
-			</ul>
-				
+		
+		<div class="seccion2">
+			<div class="container1">
+				<h2>Variables</h2>
+			</div>
+			<div class="container">
+				<img src="img/muertes.svg"/width="100" height="100" id="muertes"> 
+				<img src="img/relacion.svg"/width="100" height="100" id="relacion"> 
+				<img src="img/suicidio.svg"/width="100" height="100" id="suicidio"> 
+				<p id="muertesGr">grafico1</p>
+				<p id="relacionGr">grafico2</p>
+				<p id="suicidioGr">etc</p>
+
+
+			
+			</div>
 		</div>
-			
-			
+		<div class="interaccion">
+	 	
+<div id="chartContainer">
+  <script type="text/javascript">
+    var svg = dimple.newSvg("#chartContainer", 590, 400);
+    d3.csv("data/data1.csv", function (data) {
+      var myChart = new dimple.chart(svg, data);
+      myChart.setBounds(75, 30, 480, 330)
+      myChart.addMeasureAxis("x", "Año");
+      var y = myChart.addCategoryAxis("y", "TipodeArma");
+      myChart.addSeries(null, dimple.plot.bar);
+      myChart.draw();
+    });
+  </script>
+</div>
+
 		</div>
 	</div>
 </body>
-
-
 </html>
