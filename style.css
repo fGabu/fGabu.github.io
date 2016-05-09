@@ -59,3 +59,8 @@ h1 {
   margin:20px;
   padding:0px;
 }
+
+.chartContainer{
+  display:inline-block;
+  margin:10px;
+}

@@ -1,7 +1,7 @@
-Edad Victima;Frecuencia
-menores de 18;1
-18-30;14
-31-40;7
-41-50;15
-51 o mas;8
-Sin informacion;4
+Edad Victima,Frecuencia
+menores de 18,1
+18-30,14
+31-40,7
+41-50,15
+51 o mas,8
+Sin informacion,4
