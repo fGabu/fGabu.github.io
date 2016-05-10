@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'bebas neue'; /*a name to be used later*/
+    src: url('lib/BebasNeue.otf'); /*URL to font*/
+}
+
 body{
   margin:0px;
 }
@@ -69,4 +74,8 @@ h1 {
 .chartContainer{
   display:inline-block;
   margin:10px ;
+}
+
+.interaccion h3{
+  margin:0px;
 }
