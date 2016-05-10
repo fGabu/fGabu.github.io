@@ -60,6 +60,10 @@ h1 {
   margin:0px 50px 0px 50px;
   padding:0px;
 }
+
+.limpiarTodo h3 {
+  font-size:30px;
+}
 #menu{
   clear:both;
 
