@@ -7,9 +7,21 @@
 	<script type="text/javascript" src="lib/jquery-2.2.3.js"></script>
 	<script>
 	$(document).ready(function(){
-		$("#1TipodeArma2007").hide();
-    $("#m1uertes").click(function(){
-        $("#Ti1podeArma2007").toggle();
+		$(".chartContainer").hide();
+	});
+
+	$(document).ready(function(){
+    $("#tipodearma2007").click(function(){
+        $("#TipodeArma2007").toggle();
+    });
+    $("#tipodearma2008").click(function(){
+        $("#TipodeArma2008").toggle();
+    });
+    $("#tipodearma2009").click(function(){
+        $("#TipodeArma2009").toggle();
+    });
+    $("#tipodearma2010").click(function(){
+        $("#TipodeArma2010").toggle();
     });
 	});
 	</script>
@@ -49,16 +61,39 @@
 				<h2>Variables</h2>
 			</div>
 			<div class="container">
-				<img src="img/muertes.svg"/width="100" height="100" id="muertes"> 
-
-				<img src="img/relacion.svg"/width="100" height="100" id="relacion"> 
-		
-				<img src="img/suicidio.svg"/width="100" height="100" id="suicidio"> 
-				
+				<img src="img/Arma.svg"/width="100" height="100" id="Arma"> 
+				<img src="img/relacion.svg"/width="100" height="100" id="relacion">
+				<img src="img/Lugar.svg"/width="100" height="100" id="suicidio"> 
+				<img src="img/Edad.svg"/width="100" height="100" id="Edad"> 
+			</div>
+				<div class="menus">
+					<p id="tipodearma2007">2007</p>
+					<p id="tipodearma2008">2008</p>
+					<p id="tipodearma2009">2009</p>
+					<p id="tipodearma2010">2010</p>
+				</div>
+				<div class="menus">
+					<p id="t">2007</p>
+					<p id="t">2008</p>
+					<p id="t">2009</p>
+					<p id="t">2010</p>
+				</div>
+				<div class="menus">
+					<p id="t">2007</p>
+					<p id="t">2008</p>
+					<p id="t">2009</p>
+					<p id="t">2010</p>
+				</div>
+				<div class="menus">
+					<p id="t">2007</p>
+					<p id="t">2008</p>
+					<p id="t">2009</p>
+					<p id="t">2010</p>
+				</div>
 
 
 			
-			</div>
+			
 		</div>
 		<div class="interaccion">
 <div id="TipodeArma2007" class="chartContainer">
